@@ -51,15 +51,19 @@ VS code.
 
 
 REGISTRATION PAGE :
+
 <img width="955" height="601" alt="register" src="https://github.com/user-attachments/assets/35a97c8a-ce74-4c2f-a62c-20f8c6bc2532" />
 
 LOGIN PAGE :
+
 <img width="848" height="576" alt="login" src="https://github.com/user-attachments/assets/484ae8fd-0550-4914-9e2c-2ff80cd06bc0" />
 
 MAIN PAGE :
+
 <img width="804" height="538" alt="userinfo" src="https://github.com/user-attachments/assets/5b195be6-133c-412b-9100-ecb622f3eb20" />
 
 QUIZ PAGE :
+
 <img width="857" height="515" alt="quizpage" src="https://github.com/user-attachments/assets/f084297a-ea92-424d-9c3b-e1754bddd46d" />
 
 
