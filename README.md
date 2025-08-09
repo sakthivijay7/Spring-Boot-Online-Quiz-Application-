@@ -29,6 +29,7 @@ JpaRepository to set the query findByEmail this will check email id if exist in 
 - control the main page and  "GetMapping("/test") it return the main.html
 - Main page had login succeed user only allow and it contains their details with Quiz pages like select Quiz language - ``Python or Java``
 - ``GetMapping("/python")`` and ``"GetMapping("/java")`` this will return the python and java quiz pages.
+- Quiz page to submit score and score pass to the java then saved in the database.
 - Main page had return main.html and quiz pages. 
 
 - Main Spring Boot Application to scanpackages and execute the Spring Boot Application
@@ -39,6 +40,7 @@ JpaRepository to set the query findByEmail this will check email id if exist in 
 - Animation and coloring done by css
 - Java script done the crucial rule to help the java application navigation process like if java pass the messages to html then js getelements to alert if click ``window.location.href="/javapath"`` this model to done by the all navigation process with alert .
 - Navigation and user information locally save in the web it help retake like quiz page to back to the main page with default details.
+  Quiz page score to calcute and post to the java and java to store in the MySQL database.
 - All the java messages are window.onload function to execute the alert.
 
 - Tools and Techniques 
