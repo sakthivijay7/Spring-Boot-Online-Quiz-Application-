@@ -2,12 +2,15 @@
 #### Date:Aug09- 2025
 
 - Model:
+  
 Model contains user information like Name,Gender,Email,Password,Phone and execute automatic ``Entity`` to assign  table in database.
 
 - Repository :
+  
 JpaRepository to set the query findByEmail this will check email id if exist in database or not and also save the user information in the database with default Model class name(table name).
 
 - Controller:
+  
 1.Register controller :
 - Control the registration form and it's path ``GetMapping("/register")``  it return the register.html.
 - Name,Gender,Email,Password,Phone values ``PostMapping("/register")`` to pass in the ``"/register"`` page. 
@@ -31,13 +34,14 @@ JpaRepository to set the query findByEmail this will check email id if exist in 
 - Main Spring Boot Application to scanpackages and execute the Spring Boot Application
 
 - Front End :
+  
 - html to create the form registeration ,login  and main , quiz pages
 - Animation and coloring done by css
 - Java script done the crucial rule to help the java application navigation process like if java pass the messages to html then js getelements to alert if click ``window.location.href="/javapath"`` this model to done by the all navigation process with alert .
 - Navigation and user information locally save in the web it help retake like quiz page to back to the main page with default details.
 - All the java messages are window.onload function to execute the alert.
 
-- Tools and Techniques :
+- Tools and Techniques 
 Java,
 Spring Boot,
 HTML & CSS and JS ,
