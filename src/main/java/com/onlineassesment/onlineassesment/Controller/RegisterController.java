@@ -19,11 +19,6 @@ public class RegisterController{
     @Autowired
     CandidateRepository repo;
     
-    // This is  customized root to deploy the Railway hosting
-    @GetMapping("/")
-    public String homeRedirect() {
-       return "redirect:/register";
-}
     // Register empty form to use Get method
     @GetMapping("/register")
     public String registerform(Model model){
@@ -49,4 +44,5 @@ public class RegisterController{
     }
     
 }
+
 
