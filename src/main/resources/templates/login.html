@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="/register.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/animation.css">
+<script src="/login.js"></script>
+</head>
+<body>
+    <select id="theme">
+        <option value="">Themes</option>
+        <option value="colortheme">Color</option>
+        <option value="dark">Dark</option>
+        <option value="white">White</option>
+    </select>
+       <div class="form" id="form">
+          <form th:action="@{/login}" method="post">
+          <h1>LOG IN</h1>
+
+          <label >Email</label>
+          <input type="email" name="email" th:value="${email}" placeholder="Enter Your Email ID "
+          required>
+
+       
+          <label >Password</label>
+          <input type="password" id="password" name="password" th:value="${password}"  placeholder="Enter Your Password" required>
+        <span id="togglepassword" class="tog">
+            <i class="fa fa-eye" id="open"></i>
+            <i class="fa fa-eye-slash" id="close"></i>
+        </span>
+        
+          <button type="submit" id="btn">Login</button>
+
+          <p th:if="${noemail}" id="message1" th:text="${noemail}" style="display:none"></p>
+          <p th:if="${login}" id="message2" th:text="${login}" style="display:none"></p>
+          <p th:if="${getpassword}" id="message3" th:text="${getpassword}" style="display:none"></p>
+          </form>
+    </div>   
+    <script>
+           let togglepass = document.getElementById("togglepassword")
+            let getinputid = document.getElementById("password");
+            let openicon = document.getElementById("open");
+            let closeicon = document.getElementById("close");
+
+            if (togglepass && getinputid && openicon && closeicon) {
+                togglepass.addEventListener("click", function () {
+                    //get input types
+                    const inputtype = getinputid.getAttribute("type");
+                    const settype = inputtype === "password" ? "text" : "password";
+                    getinputid.setAttribute("type", settype);  //set types text ,password
+
+                    if (settype === "password") {
+                        //type password closed eye default and open eye none
+                        openicon.style.display = "none";
+                        closeicon.style.display = "inline-block";
+                    } else {
+                        closeicon.style.display = "none"
+                        openicon.style.display = "inline-block";
+                    }
+                });
+                if (getinputid.getAttribute("type") === "password") {
+                    //undo of type to password then default closed eye 
+                    openicon.style.display = "none";
+                    closeicon.style.display = "inline-block";
+                }
+                else {
+                    closeicon.style.display = "none"
+                    openicon.style.display = "inline-block";
+                }
+            } else {
+                console.log("no visible");
+            }
+
+    </script> 
+</body>
+</html>
